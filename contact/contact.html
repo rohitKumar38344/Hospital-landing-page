@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../contact/contact.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo-container">
+        <img src="../images/logo.png" alt="medifiy" />
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/about.html">About us</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <form class="contact__form">
+        <legend>Contact Form</legend>
+        <div class="contact__form-input">
+          <label for="user-name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="user-name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="contact__form-input">
+          <label for="user-email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="user-email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="contact__form-input">
+          <label for="user-msg">Message</label>
+          <textarea name="msg" id="user-msg">
+Enter your message
+            </textarea
+          >
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
