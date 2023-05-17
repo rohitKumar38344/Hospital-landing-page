@@ -43,7 +43,7 @@ img {
 .btn {
   border: none;
   font: inherit;
-  padding: 0.5em 1.2em;
+  padding: 0.6em 1.5em;
 }
 
 /* || Header */
@@ -64,14 +64,22 @@ img {
   gap: 2.4rem;
 }
 
-.nav__list a {
+.nav__list a:link,
+.nav__list a:visited {
   font-weight: 600;
+  color: #444;
+  transition: color 0.3s;
+}
+
+.nav__list a:hover,
+.nav__list a:active {
+  color: #20bc7e;
 }
 
 /* || Main */
 .main {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .main__section-left {
@@ -79,13 +87,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.4rem;
-  padding: 0 6.4rem;
-  width: 70%;
-  background: url("./images/topAngle.png");
-  background-position: top left 50px;
-  background-repeat: no-repeat;
-  position: relative;
+  gap: 2rem;
+  padding-left: 5rem;
 }
 
 .main__section-heading {
@@ -97,19 +100,22 @@ img {
   color: #7c7c7c;
 }
 
-.bottom-arrow {
+.top-angle {
+  align-self: flex-start;
+}
+.bottom-angle {
   position: absolute;
-  right: 85px;
-  bottom: 100px;
+  left: 60rem;
+  bottom: 90px;
 }
 
 .mouse-img {
-  width: 35px;
   position: absolute;
-  bottom: 60px;
-  left: 95%;
+  left: 54%;
+  top: 85%;
 }
 .btn__appointment {
+  cursor: pointer;
   background-color: #20bc7e;
   color: #fff;
   border-radius: 4rem;
@@ -119,13 +125,28 @@ img {
 }
 
 .main__section-right {
-  background: url("./images/yellowBox.png"), url("./images/greenBox.png");
-  background-size: 67%, 78%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
+  background-size: 390px, 430px;
 }
 
-.main__section-right img {
-  width: 71%;
-  margin-left: auto;
+.green-box,
+.yellow-box {
+  position: absolute;
+  right: 0;
+}
+
+.green-box {
+  width: 35%;
+  bottom: 30px;
+}
+
+.yellow-box {
+  width: 30%;
+  bottom: 50px;
+}
+
+.doctor-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 90%;
 }
